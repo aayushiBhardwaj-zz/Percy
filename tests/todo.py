@@ -20,30 +20,30 @@ browser=webdriver.Chrome("/Users/aayushi/Desktop/AmazonSearch/main/chromedriver"
 #browser = Chrome(options=ff_options)
 
 # go to the example app
-browser.get('https://www.browserstack.com:443')
+browser.get('http://localhost:8000')
 browser.implicitly_wait(10)
 
 # snapshot empty state
-#percy_snapshot(browser, 'Empty Todo State')
-percy_snapshot(browser, 'Home Page')
+percy_snapshot(browser, 'Empty Todo State')
+#percy_snapshot(browser, 'Home Page')
 
 # snapshot with a new todo
-#new_todo_input = browser.find_element_by_class_name('new-todo')
-#new_todo_input.send_keys('Try Percy')
-#new_todo_input.send_keys(Keys.ENTER)
-#percy_snapshot(browser, 'With a Todo')
+new_todo_input = browser.find_element_by_class_name('new-todo')
+new_todo_input.send_keys('Try Percy')
+new_todo_input.send_keys(Keys.ENTER)
+percy_snapshot(browser, 'With a Todo')
 # go to the example app
-browser.get('https://www.browserstack.com/pricing')
-browser.implicitly_wait(10)
-percy_snapshot(browser, 'Pricing Page')
+#browser.get('https://www.browserstack.com/pricing')
+#browser.implicitly_wait(10)
+#percy_snapshot(browser, 'Pricing Page')
 
 # snapshot with a completed todo
-#todo_toggle = browser.find_element_by_class_name('toggle')
-#todo_toggle.click()
-#percy_snapshot(browser, 'Completed Todo')
-browser.get('https://www.browserstack.com/integrations/automate')
-browser.implicitly_wait(10)
-percy_snapshot(browser, 'integrations automate Page')
+todo_toggle = browser.find_element_by_class_name('toggle')
+todo_toggle.click()
+percy_snapshot(browser, 'Completed Todo')
+#browser.get('https://www.browserstack.com/integrations/automate')
+#browser.implicitly_wait(10)
+#percy_snapshot(browser, 'integrations automate Page')
 
 # clean up
 browser.quit()
