@@ -1,10 +1,39 @@
 {
   "private": true,
   "dependencies": {
+    "@wdio/cli": "^7.7.2",
     "todomvc-app-css": "^2.3.0"
   },
   "devDependencies": {
-    "@percy/cli": "^1.0.0-beta.39",
-    "geckodriver": "^1.21.1"
-  }
+    "@percy/cli": "^1.0.0-beta.52",
+    "@wdio/local-runner": "^7.7.2",
+    "@wdio/mocha-framework": "^7.7.2",
+    "@wdio/spec-reporter": "^7.7.0",
+    "chromedriver": "^90.0.1",
+    "geckodriver": "^1.21.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "wdio-chromedriver-service": "^7.1.0"
+  },
+  "name": "example-percy-python-selenium",
+  "description": "![Tests](https://github.com/percy/example-percy-python-selenium/workflows/Tests/badge.svg) [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/percy/example-percy-python-selenium)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/percy/example-percy-python-selenium.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/percy/example-percy-python-selenium/issues"
+  },
+  "homepage": "https://github.com/percy/example-percy-python-selenium#readme"
 }
